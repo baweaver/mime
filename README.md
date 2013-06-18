@@ -26,6 +26,8 @@ Commands:
     mime.rb delete (macro-name)
     mime.rb edit (macro-name)
 
+Currently Record and Run are working. Document, Merge, and Delete should be simple additions. Debating the necessity of edit.
+
 Commentary and Notes
 --------------------
 
