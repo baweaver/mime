@@ -65,9 +65,10 @@ end
 def delete
 end
 
+function = ARGV.shift
 name = ARGV.shift
 
+puts function if $debug
 puts name if $debug
 
-record(name)
-run(name)
+eval "#{function}('#{name}')"
