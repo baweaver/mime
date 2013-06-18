@@ -8,7 +8,7 @@ def record(macro_name)
   commands = ""
   stop = false
   
-  puts "Recording Mime #{mime_name} - Type 'stop' to end recording"
+  puts "Recording Mime #{macro_name} - Type 'stop' to end recording"
 
   until stop
     print "Mime #{macro_name}> "
@@ -47,7 +47,7 @@ end
 def merge
 end
 
-def delete(mime_name)
+def delete(macro_name)
   File.delete("#{macro_name}.mime")
 end
 
