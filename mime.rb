@@ -3,16 +3,44 @@
 # I'll have to work on getting the library done. First some
 # experimentation in IRB
 
-# Begin recording a new Macro
-def record
-end
+# A tad hackish, yes, but gets the job done
+$debug = false 
 
-# Stop recording a Macro
-def stop
+# Begin recording a new Macro
+def record(macro_name)
+  commands = ""
+  stop = false
+
+  until stop
+    print "Mime #{macro_name}> "
+    cmd = gets
+
+    if cmd =~ /stop/
+      stop = true
+      break
+    end
+
+    commands << cmd + "\n"
+
+    # Execute command, print results
+    puts `#{cmd}`
+  end
+
+  puts "\n" + commands if $debug
+
+  File.open("#{macro_name}.mime", 'w'){ |f| f.write(commands) }
 end
 
 # Run a Macro
-def run
+def run(macro_name)
+  macro = File.open("#{macro_name}.mime",'r')
+
+  macro.each_line do |cmd|
+    unless cmd =~ /^$/
+      puts "cmd: " + cmd if $debug
+      puts `#{cmd}`
+    end
+  end
 end
 
 # Generate Documentation based on the specified Mime file
@@ -36,3 +64,10 @@ end
 # for that!
 def delete
 end
+
+name = ARGV.shift
+
+puts name if $debug
+
+record(name)
+run(name)
