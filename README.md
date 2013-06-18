@@ -26,9 +26,9 @@ Commands:
     mime.rb delete (macro-name)
 
 Planned Features
-    * Markdown support for Documentation
-    * Dynamic commands
-    * TCL Integration for Mime'ing SSH and Telnet sessions, or some other method
+* Markdown support for Documentation
+* Dynamic commands
+* TCL Integration for Mime'ing SSH and Telnet sessions, or some other method
 
 Commentary and Notes
 --------------------
