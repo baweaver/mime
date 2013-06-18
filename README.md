@@ -24,9 +24,11 @@ Commands:
     mime.rb run (macro-name)
     mime.rb merge (macro-names)
     mime.rb delete (macro-name)
-    mime.rb edit (macro-name)
 
-Currently Record and Run are working. Document, Merge, and Delete should be simple additions. Debating the necessity of edit.
+Planned Features
+    * Markdown support for Documentation
+    * Dynamic commands
+    * TCL Integration for Mime'ing SSH and Telnet sessions, or some other method
 
 Commentary and Notes
 --------------------
