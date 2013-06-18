@@ -10,6 +10,8 @@ $debug = false
 def record(macro_name)
   commands = ""
   stop = false
+  
+  puts "Recording Mime #{mime_name} - Type 'stop' to end recording"
 
   until stop
     print "Mime #{macro_name}> "
