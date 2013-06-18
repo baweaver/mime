@@ -18,12 +18,13 @@ Plans
 -----
 
 Commands:
-mime.rb record (macro-name)
-mime.rb document (macro-name)
-mime.rb run (macro-name)
-mime.rb merge (macro-names)
-mime.rb delete (macro-name)
-mime.rb edit (macro-name)
+
+    mime.rb record (macro-name)
+    mime.rb document (macro-name)
+    mime.rb run (macro-name)
+    mime.rb merge (macro-names)
+    mime.rb delete (macro-name)
+    mime.rb edit (macro-name)
 
 Commentary and Notes
 --------------------
