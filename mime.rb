@@ -3,9 +3,6 @@
 # I'll have to work on getting the library done. First some
 # experimentation in IRB
 
-# A tad hackish, yes, but gets the job done
-$debug = false 
-
 # Begin recording a new Macro
 def record(macro_name)
   commands = ""
@@ -28,8 +25,6 @@ def record(macro_name)
     puts `#{cmd}`
   end
 
-  puts "\n" + commands if $debug
-
   File.open("#{macro_name}.mime", 'w'){ |f| f.write(commands) }
 end
 
@@ -37,12 +32,7 @@ end
 def run(macro_name)
   macro = File.open("#{macro_name}.mime",'r')
 
-  macro.each_line do |cmd|
-    unless cmd =~ /^$/
-      puts "cmd: " + cmd if $debug
-      puts `#{cmd}`
-    end
-  end
+  macro.each_line{ |cmd| puts `#{cmd}` unless cmd =~ /^$/ }
 end
 
 # Generate Documentation based on the specified Mime file
@@ -57,20 +47,11 @@ end
 def merge
 end
 
-# Edit the contents of the Mime, debating if I just want to export
-# it to the default editor or make a custom editor for this one.
-def edit
-end
-
-# Delete a Macro. Confirmation? We're in Unix. Ain't nobody got time
-# for that!
-def delete
+def delete(mime_name)
+  File.delete("#{macro_name}.mime")
 end
 
 function = ARGV.shift
 name = ARGV.shift
-
-puts function if $debug
-puts name if $debug
 
 eval "#{function}('#{name}')"
