@@ -22,18 +22,24 @@ The real fun starts when you start adding dynamic content to the macros, allowin
 Recording
 ---------
 
-To record, simply type './mime.rb record (macro-name)' to start recording, and stop to stop. Commenting your code can be done by using # at the beginning of the line.
+To record, simply type 
+    
+    ./mime.rb record (macro-name) 
+    
+...to start recording, and stop to stop. Commenting your code can be done by using # at the beginning of the line.
 
 Running
 -------
 
 Running a macro will execute all lines not starting with #, as
+    
     ./mime.rb run (macro-name)
 
 Documentation
 -------------
 
 By starting a line with #, it will be interpreted as a comment. Comments can be written in Markdown and exported into an HTML page, as
+    
     ./mime.rb document (macro-name)
 
 Plans
