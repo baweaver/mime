@@ -61,6 +61,8 @@ Planned Features
 Commentary and Notes
 --------------------
 
+A clever thing you can do, if you so wish, is have mime macros call eachother in tandem. This can yield some really interesting results in some cases, as well as making this an increasingly ad-hoc reinvention of LISP.
+
 I'm going to do the first round through in Ruby to get a basic working app up, and as I get more comfortable with Clojure I may well start porting it over as an experiment with both it and LISP Macros. Looks like I'll be reading through Let Over Lambda all the way through for this one.
 
 Eventually I would very much like to integrate a more full bodied AI into this so Mime will learn what the fastest way is to recognize and fix issues. Mime will learn the basics from you, and then go about its merry way doing some crazy stuff. To be fair this DOES have the possibility of going horribly awry, but that's why we're not using it in production, right? We are? Perhaps I should finish a EULA....
