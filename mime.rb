@@ -50,10 +50,16 @@ def document(macro_name)
   macro = File.open("#{macro_name}.mime",'r')
   docs  = File.open("doc-#{macro_name}.html",'w')
 
+  comment = true
+  
   str = macro.each_line.inject("") do |str, line|
     if line =~ /^#/
+      str << "\n" unless comment 
+      comment = true
       str << line.gsub(/^# /,'')
     else
+      str << "\n" if comment  
+      comment = false
       str << "    #{line}"
     end
   end
