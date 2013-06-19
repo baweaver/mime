@@ -3,6 +3,11 @@ Mime
 
 Mime is a tool for Ops folk that allows you to record your troubleshooting for macros and documentation
 
+Requires
+--------
+
+* gem github-markdown
+
 Description
 -----------
 
@@ -14,19 +19,36 @@ The second feature of Mime is acting as a Macro engine to repeat whatever steps 
 
 The real fun starts when you start adding dynamic content to the macros, allowing for mime to grow and learn new methods of troubleshooting that may be more effective.
 
+Recording
+---------
+
+To record, simply type './mime.rb record (macro-name)' to start recording, and stop to stop. Commenting your code can be done by using # at the beginning of the line.
+
+Running
+-------
+
+Running a macro will execute all lines not starting with #, as
+    ./mime.rb run (macro-name)
+
+Documentation
+-------------
+
+By starting a line with #, it will be interpreted as a comment. Comments can be written in Markdown and exported into an HTML page, as
+    ./mime.rb document (macro-name)
+
 Plans
 -----
 
 Commands:
 
-    mime.rb record (macro-name)
-    mime.rb document (macro-name)
-    mime.rb run (macro-name)
-    mime.rb merge (macro-names)
-    mime.rb delete (macro-name)
+    ./mime.rb record (macro-name)
+    ./mime.rb document (macro-name)
+    ./mime.rb run (macro-name)
+    ./mime.rb merge (macro-names)
+    ./mime.rb delete (macro-name)
 
 Planned Features
-* Markdown support for Documentation
+* Markdown support for Documentation [DONE]
 * Dynamic commands
 * TCL Integration for Mime'ing SSH and Telnet sessions, or some other method
 
