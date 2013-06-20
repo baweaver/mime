@@ -19,6 +19,17 @@ The second feature of Mime is acting as a Macro engine to repeat whatever steps 
 
 The real fun starts when you start adding dynamic content to the macros, allowing for mime to grow and learn new methods of troubleshooting that may be more effective.
 
+Macros?
+-------
+
+...but wait, these aren't macros! They don't expand into more code! You'd be right in saying that, and that is true at this point but you have to be able to walk before you can start sprinting. Macros themselves and code expansion are planned for this, but a lot of testing has to be done to make sure it works properly. 
+
+The more powerful a tool, the simpler it becomes to make some nasty side-effects.
+
+How do I plan to achieve this? Using interpolation methods and shorthand code, we can expand these into a lot more elegant and powerful solutions. By using this and chaining mime scripts together some really powerful tools can be made extremely quickly.
+
+Now if this sounds an awful lot like LISP, it really is. That's primarily because I want to see if I can do some of this in Ruby before I redo most of the code in either Clojure or Common Lisp to really play with some macro functionality.
+
 Nifty Trick
 -----------
 
