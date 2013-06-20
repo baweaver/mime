@@ -19,6 +19,15 @@ The second feature of Mime is acting as a Macro engine to repeat whatever steps 
 
 The real fun starts when you start adding dynamic content to the macros, allowing for mime to grow and learn new methods of troubleshooting that may be more effective.
 
+Nifty Trick
+-----------
+
+Put this into a mime file
+    
+    sed 's/^#!.*//' < mime.rb > mime.mime; ./mime.rb document mime
+
+...and then open doc-mime.html. You'll have made Mime just document itself. Meta miming perhaps?
+
 Recording
 ---------
 
