@@ -13,14 +13,11 @@ def record(macro_name)
   
   puts "Recording Mime #{macro_name} - Type 'stop' to end recording"
 
-  until stop
+  until 1 == 2
     print "Mime #{macro_name}> "
     cmd = gets
 
-    if cmd =~ /stop/
-      stop = true
-      break
-    end
+    break if cmd =~ /stop/
 
     commands << cmd
 
@@ -36,9 +33,7 @@ def run(macro_name)
   macro = File.open("#{macro_name}.mime",'r')
 
   macro.each_line do |cmd| 
-    unless cmd =~ /^$/ || cmd =~ /^#/  
-      puts `#{cmd}` unless cmd =~ /^$/
-    end
+    puts `#{cmd}` unless ( cmd =~ /^$/ || cmd =~ /^#/ )
   end
 end
 
