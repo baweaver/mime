@@ -24,7 +24,6 @@ require 'github/markdown'
 
 # Record
 # ------
-#
 # Begin recording a new Macro, saved as name.mime
 def record(macro_name)
   # Commands are stored in a string
@@ -54,7 +53,6 @@ end
 
 # Run
 # ---
-#
 # Run a Macro
 def run(macro_name)
   macro = File.open("#{macro_name}.mime",'r')
