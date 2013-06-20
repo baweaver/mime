@@ -38,7 +38,7 @@ def record(macro_name)
     cmd = gets
     
     # Stop interpreting and recording on stop
-    break if cmd.eql?('stop')
+    break if cmd =~ /stop/
 
     # Concatenate the command to the list
     commands << cmd
